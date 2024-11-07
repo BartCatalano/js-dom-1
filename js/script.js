@@ -10,13 +10,20 @@ const titoloElement = document.getElementById("titolo");
 
  // ANDIAMO A CREARE EVENTO DI CLICK BOTTONE
 
+
+ 
+
  buttonElement.addEventListener("click", function(){
-console.log(buttonElement.classList);
-if(buttonElement.classList.contains("bg-red")){
+if(buttonElement.classList.contains("bg-red")){                 // ACCENDIAMO LA LAMPADINA 
     buttonElement.classList.remove("bg-red");
-    titoloElement.innerHTML = "Sono Accesa!"
+    buttonElement.innerHTML = "Spegnimi";
+    titoloElement.innerHTML = "Sono Accesa!";
+    immagineLampadina.src = "./img/yellow_lamp.png"
+                             
 } else {
-    buttonElement.classList.add("bg-red");
-    titoloElement.innerHTML = "La luce è spenta!"
+    buttonElement.classList.add("bg-red");                    // SPEGNAMO LA LAMPADINA 
+    buttonElement.innerHTML = "Accendimi";
+    titoloElement.innerHTML = "Sono Spenta!";
+    immagineLampadina.src = "./img/white_lamp.png"
 }
  });
